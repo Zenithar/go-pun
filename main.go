@@ -44,7 +44,7 @@ func main() {
 	defer reader.Close()
 
 	// Read line by line
-	scanner := bufio.NewScanner(os.Stdin)
+	scanner := bufio.NewScanner(reader)
 	for scanner.Scan() {
 		if decode {
 			// Decode PUNYCODE to ASCII
